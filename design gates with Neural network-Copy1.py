@@ -1,6 +1,6 @@
 
 # coding: utf-8
-
+import Numpy as np
 # Binary function
 def BF(x):
     if x>0:
@@ -18,7 +18,21 @@ N=0.001
 Input=[(1,1,1),(1,0,1),(0,1,1),(0,0,1)]
 test_input = np.array([[1, 1,1], [1, 0,1],[0,1,1],[0,0,1]])
 correct_output=[True,False,False,False]
-# trian my preceptron
+#show dataset to know if linear or not
+import matplotlib.pyplot as plt
+x=np.array([[1,1],[1,0],[0,1],[0,0]])
+y=[True,False,False,False]
+for t in range(4):
+    if y[t]==True:
+        plt.scatter(x[t][0] , x[t][1]  , alpha = 0.8,c='r')
+    else:
+        
+        plt.scatter(x[t][0] , x[t][1]  , alpha = 0.8,c='y')
+plt.show()
+
+# trian by preceptron
+
+
 for i in range(40):
     index=0
     count=1    
